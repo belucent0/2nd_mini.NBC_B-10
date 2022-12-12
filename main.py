@@ -19,12 +19,12 @@ app.permanent_session_lifetime = timedelta(minutes=10)
 # db = pymysql.connect(host='127.0.0.1',
 #                      port=3306,
 #                      user='root',
-#                      passwd='qwe[]!23',
-#                      db='2_project',
+#                      passwd='---',
+#                      db='---t',
 #                      charset='utf8')
 
-db = pymysql.connect(host='secendproj.cczokkdg0lti.ap-northeast-1.rds.amazonaws.com', port=3306, user='admin',
-                     passwd='roqkfwkehlrhtlqwh', db='2_project', charset='utf8')
+db = pymysql.connect(host='---.---.ap-northeast-1.rds.amazonaws.com', port=3306, user='admin',
+                     passwd='---', db='2_project', charset='utf8')
 cursor = db.cursor()
 
 
@@ -133,8 +133,8 @@ def none2_page():
 
 @app.route('/', methods=['GET', 'POST'])
 def login_btn():
-    db = pymysql.connect(host='secendproj.cczokkdg0lti.ap-northeast-1.rds.amazonaws.com', port=3306, user='admin',
-                         passwd='roqkfwkehlrhtlqwh', db='2_project', charset='utf8')
+    db = pymysql.connect(host='----.----.ap-northeast-1.rds.amazonaws.com', port=3306, user='admin',
+                         passwd='----', db='2_project', charset='utf8')
     cursor = db.cursor()
 
     msg = ''
@@ -178,8 +178,8 @@ def logout():
 # 회원가입 기능
 @app.route("/signup", methods=["POST"])
 def signup_btn_click():
-    db = pymysql.connect(host='secendproj.cczokkdg0lti.ap-northeast-1.rds.amazonaws.com', port=3306, user='admin',
-                         passwd='roqkfwkehlrhtlqwh', db='2_project', charset='utf8')
+    db = pymysql.connect(host='----.----.ap-northeast-1.rds.amazonaws.com', port=3306, user='admin',
+                         passwd='----', db='2_project', charset='utf8')
     cursor = db.cursor()
 
     name_receive = request.form['name_give']
@@ -198,10 +198,10 @@ def signup_btn_click():
 # 페이지 네이션
 @app.route("/comment/<int:page_id>", methods=["GET"])
 def comment_get(page_id):
-    db = pymysql.connect(host='secendproj.cczokkdg0lti.ap-northeast-1.rds.amazonaws.com',
+    db = pymysql.connect(host='----.----.ap-northeast-1.rds.amazonaws.com',
                          port=3306,
                          user='admin',
-                         passwd='roqkfwkehlrhtlqwh',
+                         passwd='----h',
                          db='2_project',
                          charset='utf8')
     cursor = db.cursor()
@@ -232,10 +232,10 @@ def comment_get(page_id):
 # 게시글 작성
 @app.route("/save_comment", methods=["POST"])
 def comment_post():
-    db = pymysql.connect(host='secendproj.cczokkdg0lti.ap-northeast-1.rds.amazonaws.com',
+    db = pymysql.connect(host='----.----.ap-northeast-1.rds.amazonaws.com',
                          port=3306,
                          user='admin',
-                         passwd='roqkfwkehlrhtlqwh',
+                         passwd='----h',
                          db='2_project',
                          charset='utf8')
     cursor = db.cursor()
@@ -260,10 +260,10 @@ def comment_post():
 # 게시글 삭제
 @app.route("/delete", methods=["DELETE"])
 def comment_delete():
-    db = pymysql.connect(host='secendproj.cczokkdg0lti.ap-northeast-1.rds.amazonaws.com',
+    db = pymysql.connect(host='----.----.ap-northeast-1.rds.amazonaws.com',
                          port=3306,
                          user='admin',
-                         passwd='roqkfwkehlrhtlqwh',
+                         passwd='----h',
                          db='2_project',
                          charset='utf8')
     cursor = db.cursor()
@@ -291,10 +291,10 @@ def comment_delete():
 # 게시글 수정
 @app.route("/put", methods=["PUT"])
 def comment_put():
-    db = pymysql.connect(host='secendproj.cczokkdg0lti.ap-northeast-1.rds.amazonaws.com',
+    db = pymysql.connect(host='----.----.ap-northeast-1.rds.amazonaws.com',
                          port=3306,
                          user='admin',
-                         passwd='roqkfwkehlrhtlqwh',
+                         passwd='----h',
                          db='2_project',
                          charset='utf8')
     cursor = db.cursor()
